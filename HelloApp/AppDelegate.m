@@ -15,21 +15,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    NSLog(@"The value of 25 / 5 = %d", 25 / 5);
-    NSLog(@"The value of 26 / 5 = %d", 26 / 5);
-    NSLog(@"The value of 26 %% 5 = %d", 26 % 5);
-    NSLog(@"The value of 25 %% 5 = %d", 26 % 5);
-
-    for (int i = 0; i < 11; i++) 
-    {
-        NSString *logString = [NSString stringWithFormat:@"The current number is: %d", i];
-        if (i == 3) {
-            NSLog(@"%d: counter IS equal to 3", i);
+    for (int i=1; i<101; i++) {
+        if (i%3 == 0 && i%5 != 0) {
+            NSLog(@"Fizz");
+        }
+        else if (i%5 == 0 && i%3 != 0) {
+            NSLog(@"Buzz");
+        }
+        else if (i%5 == 0 && i%3 == 0) {
+            NSLog(@"FizzBuzz");
         }
         else {
-            if (i == 4) {
-                NSLog(@"%d: counter IS equal to 4", i);
-            }
+            NSLog(@"%d", i);
         }
     }
     // Override point for customization after application launch.
