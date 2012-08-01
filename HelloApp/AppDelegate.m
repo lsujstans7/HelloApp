@@ -14,8 +14,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    for (int i=1;i<11; i++) {
-        NSLog(@"the current number = %d", i);
+    for (int i = 0; i < 11; i++) 
+    {
+        NSString *logString = [NSString stringWithFormat:@"The current number is: %d", i];
+        NSLog(logString);
     }
     // Override point for customization after application launch.
     return YES;
